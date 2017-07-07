@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Options</title>
+</head>
+
+<body>
+  <div class="j_container">
+    <div class="j_head"></div>
+    <div class="j_body"></div>
+    <div class="j_foot"></div>
+  </div>
+  <script src="../js/lib/jquery.js"></script>
+  <script src="../js/lib/doT.min.js"></script>
+  <script src="../js/options/options.js"></script>
+  <script type="text/template" id="tmpl_tablist">
+    要抓取的页面
+    <select name="" id="tabList">
+      <option value=""></option>
+      {{~it.tabs:tab:index}}
+      <option value="{{=tab.id}}">{{=tab.title}}</option>
+      {{~}}
+    </select>
+    <label for=""><input type="text" placeholder="抓取频率"></label>
+    <button class="j_exec">执行</button>
+  </script>
+  <script type="text/template" id="tmpl_results">
+    <div>上次抓取位置：</div>
+    <ul></ul>
+  </script>
+</body>
+
+</html>

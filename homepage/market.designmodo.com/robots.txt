@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /wp-admin/
+
+sitemap: http://market.designmodo.com/sitemap_index.xml

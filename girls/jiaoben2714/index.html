@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>门户网站jQuery相册代码 - 站长素材</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="css/piccontext.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/piccontent.min.js" type="text/javascript"></script>
+</head>
+<body>
+<!--主体内容-->
+<div class="main"> 
+  <!--弹出层开始-->
+  <div class="bodymodal"></div>
+  <!--播放到第一张图的提示-->
+  <div class="firsttop">
+    <div class="firsttop_left"> 
+    </div>
+    <div class="firsttop_right">
+      <div class="close2"> <a class="closebtn1" title="关闭" href="javascript:void(0)"></a> </div>
+      <div class="replay">
+        <h2 id="div-end-h2"> 已到第一张图片了。 </h2>
+        <p> <a class="replaybtn1" href="javascript:;">重新播放</a> </p>
+      </div>
+      <div class="pictwo">
+        <ul>
+          <li><a href="http://sc.chinaz.com" title="成都举行最美女孩大赛 高校美女身穿旗袍秀身材" target="_blank"><img src="images/prev.jpg" alt="成都举行最美女孩大赛 高校美女身穿旗袍秀身材" /></a>
+            <div class="imgdivtext"> <a href="http://sc.chinaz.com" title="成都举行最美女孩大赛 高校美女身穿旗袍秀身材" target="_blank">上一图集</a> </div>
+          </li>          
+          <li><a href="http://sc.chinaz.com" title="王诗龄一家三口赴美开启梦幻的“公主之旅”假期" target="_blank"><img src="images/next.jpg" alt="王诗龄一家三口赴美开启梦幻的“公主之旅”假期" /></a>
+            <div class="imgdivtext"> <a href="http://sc.chinaz.com" title="王诗龄一家三口赴美开启梦幻的“公主之旅”假期" target="_blank">下一图集</a> </div>
+          </li>
+        </ul>
+      </div>
+      <div class="returnbtn"> <a href="http://sc.chinaz.com">返回图库首页</a> </div>
+    </div>
+  </div>
+  <!--播放到最后一张图的提示-->
+  <div class="endtop">
+    <div class="firsttop_left"> 
+    </div>
+    <div class="firsttop_right">
+      <div class="close2"> <a class="closebtn2" title="关闭" href="javascript:void(0)"></a> </div>
+      <div class="replay">
+        <h2 id="H1"> 已到最后一张图片了。 </h2>
+        <p> <a class="replaybtn2" href="javascript:;">重新播放</a> </p>
+      </div>
+      <div class="pictwo">
+        <ul>
+          <li><a href="http://sc.chinaz.com" title="成都举行最美女孩大赛 高校美女身穿旗袍秀身材" target="_blank"><img src="images/prev.jpg" alt="成都举行最美女孩大赛 高校美女身穿旗袍秀身材" /></a>
+            <div class="imgdivtext"> <a href="http://sc.chinaz.com" title="成都举行最美女孩大赛 高校美女身穿旗袍秀身材" target="_blank">上一图集</a> </div>
+          </li>          
+          <li><a href="http://sc.chinaz.com" title="王诗龄一家三口赴美开启梦幻的“公主之旅”假期" target="_blank"><img src="images/next.jpg" alt="王诗龄一家三口赴美开启梦幻的“公主之旅”假期" /></a>
+            <div class="imgdivtext"> <a href="http://sc.chinaz.com" title="王诗龄一家三口赴美开启梦幻的“公主之旅”假期" target="_blank">下一图集</a> </div>
+          </li>
+        </ul>
+      </div>
+      <div class="returnbtn"> <a href="http://sc.chinaz.com">返回图库首页</a> </div>
+    </div>
+  </div>
+  <!--弹出层结束--> 
+  <!--图片特效内容开始-->
+  <div class="piccontext">
+    <h2> 上戏校花迪丽热巴清新写真宛若小仙女 </h2>
+    <div class="source">
+      <div class="source_left"> 来源：站长素材<span>2014/8/7 17:17:00</span> </div>
+      <div class="source_right">
+        <div class="support"> 支持<img src="images/jiantou1.jpg" />键翻阅图片 </div>
+        <span>|</span><a href="#myspeak" class="spell">我有话说</a><span>|</span><a href="javascript:;" class="list">列表查看</a> </div>
+      <div class="source_right1"> <a href="javascript:;" class="gaoqing">高清查看</a> </div>
+    </div>
+    <!--大图展示-->
+    <div class="picshow">
+      <div class="picshowtop">
+          <a href="#"><img src="" alt="" id="pic1" curindex="0" /></a>
+          <a id="preArrow" href="javascript:void(0)" class="contextDiv" title="上一张"><span id="preArrow_A"></span></a>
+          <a id="nextArrow" href="javascript:void(0)" class="contextDiv" title="下一张"><span id="nextArrow_A"></span></a>
+      </div>
+      <div class="picshowtxt">
+        <div class="picshowtxt_left"><span>1</span>/<i>12</i></div>
+        <div class="picshowtxt_right"></div>
+      </div>
+      <div class="picshowlist"> 
+        <!--上一条图库-->
+        <div class="picshowlist_left">
+          <div class="picleftimg"> <a href="http://sc.chinaz.com" title="成都举行最美女孩大赛 高校美女身穿旗袍秀身材" target="_blank"><img src="images/prev.jpg" alt="成都举行最美女孩大赛 高校美女身穿旗袍秀身材" /></a> </div>
+          <div class="piclefttxt"> <a href="http://sc.chinaz.com" title="成都举行最美女孩大赛 高校美女身穿旗袍秀身材" target="_blank">成都举行最美女孩大赛 高校美女身穿旗袍秀身材</a> </div>
+        </div>
+        <div class="picshowlist_mid">
+          <div class="picmidleft"> <a href="javascript:void(0)" id="preArrow_B"><img src="images/left1.jpg" alt="上一个" /></a> </div>
+          <div class="picmidmid">
+            <ul>
+              <li> <a href="javascript:void(0);"><img src="images/1.jpg" alt="" bigimg="images/1.jpg" text="《古剑》小师妹迪丽热巴清新写真宛若小仙女" /></a></li>
+              <li> <a href="javascript:void(0);"><img src="images/2.jpg" alt="" bigimg="images/2.jpg" text="《古剑》小师妹迪丽热巴清新写真宛若小仙女" /></a></li>
+              <li> <a href="javascript:void(0);"><img src="images/3.jpg" alt="" bigimg="images/3.jpg" text="《古剑》小师妹迪丽热巴清新写真宛若小仙女" /></a></li>
+              <li> <a href="javascript:void(0);"><img src="images/4.jpg" alt="" bigimg="images/4.jpg" text="《古剑》小师妹迪丽热巴清新写真宛若小仙女" /></a></li>
+              <li> <a href="javascript:void(0);"><img src="images/5.jpg" alt="" bigimg="images/5.jpg" text="《古剑》小师妹迪丽热巴清新写真宛若小仙女" /></a></li>
+              <li> <a href="javascript:void(0);"><img src="images/6.jpg" alt="" bigimg="images/6.jpg" text="《古剑》小师妹迪丽热巴清新写真宛若小仙女" /></a></li>
+              <li> <a href="javascript:void(0);"><img src="images/7.jpg" alt="" bigimg="images/7.jpg" text="《古剑》小师妹迪丽热巴清新写真宛若小仙女" /></a></li>
+              <li> <a href="javascript:void(0);"><img src="images/8.jpg" alt="" bigimg="images/8.jpg" text="《古剑》小师妹迪丽热巴清新写真宛若小仙女" /></a></li>
+              <li> <a href="javascript:void(0);"><img src="images/9.jpg" alt="" bigimg="images/9.jpg" text="《古剑》小师妹迪丽热巴清新写真宛若小仙女" /></a></li>
+              <li> <a href="javascript:void(0);"><img src="images/10.jpg" alt="" bigimg="images/10.jpg" text="《古剑》小师妹迪丽热巴清新写真宛若小仙女" /></a></li>
+              <li> <a href="javascript:void(0);"><img src="images/11.jpg" alt="" bigimg="images/11.jpg" text="《古剑》小师妹迪丽热巴清新写真宛若小仙女" /></a></li>
+              <li> <a href="javascript:void(0);"><img src="images/12.jpg" alt="" bigimg="images/12.jpg" text="《古剑》小师妹迪丽热巴清新写真宛若小仙女" /></a></li>
+            </ul>
+          </div>
+          <div class="picmidright"> <a href="javascript:void(0)" id="nextArrow_B"><img src="images/right1.jpg" alt="下一个" /></a> </div>
+        </div>
+        <!--下一张图库新闻-->
+        <div class="picshowlist_right">
+          <div class="picleftimg"> <a href="http://sc.chinaz.com" title="王诗龄一家三口赴美开启梦幻的“公主之旅”假期" target="_blank"><img src="images/next.jpg" alt="王诗龄一家三口赴美开启梦幻的“公主之旅”假期" /></a> </div>
+          <div class="piclefttxt"> <a href="http://sc.chinaz.com" title="王诗龄一家三口赴美开启梦幻的“公主之旅”假期" target="_blank">王诗龄一家三口赴美开启梦幻的“公主之旅”假期</a> </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--列表展示-->
+    <div class="piclistshow">
+      <ul>
+        <li>
+          <div class="picimg"><img src="images/1.jpg" alt="" /></div>
+          <div class="pictxt">
+            <h3>《古剑》小师妹迪丽热巴清新写真宛若小仙女<span>(1/12)</span></h3>
+          </div>
+        </li>
+        <li>
+          <div class="picimg"><img src="images/2.jpg" alt="" /></div>
+          <div class="pictxt">
+            <h3>《古剑》小师妹迪丽热巴清新写真宛若小仙女<span>(2/12)</span></h3>
+          </div>
+        </li>
+        <li>
+          <div class="picimg"><img src="images/3.jpg" alt="" /></div>
+          <div class="pictxt">
+            <h3>《古剑》小师妹迪丽热巴清新写真宛若小仙女<span>(3/12)</span></h3>
+          </div>
+        </li>
+        <li>
+          <div class="picimg"><img src="images/4.jpg" alt="" /></div>
+          <div class="pictxt">
+            <h3>《古剑》小师妹迪丽热巴清新写真宛若小仙女<span>(4/12)</span></h3>
+          </div>
+        </li>
+        <li>
+          <div class="picimg"><img src="images/5.jpg" alt="" /></div>
+          <div class="pictxt">
+            <h3>《古剑》小师妹迪丽热巴清新写真宛若小仙女<span>(5/12)</span></h3>
+          </div>
+        </li>
+        <li>
+          <div class="picimg"><img src="images/6.jpg" alt="" /></div>
+          <div class="pictxt">
+            <h3>《古剑》小师妹迪丽热巴清新写真宛若小仙女<span>(6/12)</span></h3>
+          </div>
+        </li>
+        <li>
+          <div class="picimg"><img src="images/7.jpg" alt="" /></div>
+          <div class="pictxt">
+            <h3>《古剑》小师妹迪丽热巴清新写真宛若小仙女<span>(7/12)</span></h3>
+          </div>
+        </li>
+        <li>
+          <div class="picimg"><img src="images/8.jpg" alt="" /></div>
+          <div class="pictxt">
+            <h3>《古剑》小师妹迪丽热巴清新写真宛若小仙女<span>(8/12)</span></h3>
+          </div>
+        </li>
+        <li>
+          <div class="picimg"><img src="images/9.jpg" alt="" /></div>
+          <div class="pictxt">
+            <h3>《古剑》小师妹迪丽热巴清新写真宛若小仙女<span>(9/12)</span></h3>
+          </div>
+        </li>
+        <li>
+          <div class="picimg"><img src="images/10.jpg" alt="" /></div>
+          <div class="pictxt">
+            <h3>《古剑》小师妹迪丽热巴清新写真宛若小仙女<span>(10/12)</span></h3>
+          </div>
+        </li>
+        <li>
+          <div class="picimg"><img src="images/11.jpg" alt="" /></div>
+          <div class="pictxt">
+            <h3>《古剑》小师妹迪丽热巴清新写真宛若小仙女<span>(11/12)</span></h3>
+          </div>
+        </li>
+        <li>
+          <div class="picimg"><img src="images/12.jpg" alt="" /></div>
+          <div class="pictxt">
+            <h3>《古剑》小师妹迪丽热巴清新写真宛若小仙女<span>(12/12)</span></h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>

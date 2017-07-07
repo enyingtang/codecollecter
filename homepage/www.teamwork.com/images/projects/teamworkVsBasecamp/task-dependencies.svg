@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="76" height="76" viewBox="0 0 76 76">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        stroke: #5bbc30;
+        stroke-width: 4px;
+        fill: none;
+      }
+
+      .cls-2, .cls-4 {
+        fill: #7ed955;
+      }
+
+      .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g>
+    <circle cx="20.97" cy="20.97" r="18.97" class="cls-1"/>
+    <rect x="14.375" y="19.03" width="13.187" height="4.66" rx="2" ry="2" class="cls-2"/>
+    <rect x="43.03" y="43.03" width="30.97" height="30.97" rx="5" ry="5" class="cls-1"/>
+    <path d="M21.355,37.612 L21.355,59.290 L44.581,59.290 " class="cls-3"/>
+    <path d="M55.357,62.347 C55.119,62.594 54.805,62.715 54.493,62.710 C54.181,62.715 53.867,62.594 53.629,62.347 L49.896,58.457 C49.428,57.969 49.428,57.178 49.896,56.691 L50.884,55.661 C51.352,55.173 52.111,55.173 52.578,55.661 L54.493,57.657 L60.439,51.459 C60.907,50.971 61.665,50.971 62.133,51.459 L63.121,52.489 C63.589,52.976 63.589,53.767 63.121,54.255 L55.357,62.347 Z" class="cls-4"/>
+  </g>
+</svg>

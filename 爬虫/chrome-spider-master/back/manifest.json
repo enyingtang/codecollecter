@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+  "name": "Spider",
+  "version": "0.0.2",
+  "description": "公众号历史消息爬虫",
+  "icons":{
+    "16":"img/Kat.png",
+    "48":"img/Kat.png",
+    "128":"img/Kat.png"
+  },
+
+  "permissions": [
+    "downloads",
+    "activeTab",
+    "contextMenus",
+    "pageCapture",
+    "storage",
+    "unlimitedStorage",
+    "tabs",
+    "<all_urls>"
+  ],
+  "content_scripts": [{
+    "matches": ["*://mp.weixin.qq.com/*"],
+    "js": ["js/lib/jquery.js","js/content/main.js"]
+  }],
+  "background": {
+    "scripts": [
+      "js/background/bg.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon":{
+      "19":"img/Kat.png",
+      "38":"img/Kat.png"
+    },
+    "default_title": "公众号历史消息",
+    "default_popup": "html/popup.html"
+  },
+  "optional_permissions":["tabs"],
+  "options_page":"html/options.html",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

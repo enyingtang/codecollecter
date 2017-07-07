@@ -1,0 +1,2 @@
+class HtmlDownLoader(object):
+    pass

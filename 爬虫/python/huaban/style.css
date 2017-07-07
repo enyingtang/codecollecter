@@ -1,0 +1,22 @@
+*{
+	margin:0;
+	padding:0;
+}
+.pic{
+	float:left;
+	width:100%;
+}
+.pic ul{
+	list-style:none;
+	overflow:hidden;
+}
+.pic li{
+	float:left;
+	clear:right;
+}
+.pic a>img{
+	max-height:200px;
+}
+.pic a:hover img{
+	max-height:100%;
+}

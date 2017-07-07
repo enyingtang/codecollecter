@@ -1,0 +1,26 @@
+.temp1{width:610px; padding-left:30px;}
+.icons{position:relative; width:100px; height:126px; float:left; margin:10px 20px;}
+.icons span{background:#f6242d; position:absolute; top:-20px; right:-20px; color:#FFF; border-radius:20px; padding:3px 10px;}
+.dian{float:left; width:640px; height:16px; text-align:center;}
+.dian img{width:81px; height:16px; margin:20px auto;}
+.btn_icon{position:absolute; width:640px; height:151px; bottom:5%; left:0; background:url(../images/page_icon23.png) left top no-repeat;}
+
+.fd1{position:absolute; width:640px; height:58px; top:90px;}
+.fd2{position:absolute; width:640px; height:38px; top:190px;}
+.fd3{position:absolute; width:640px; height:47px; top:260px;}
+.fd4{position:absolute; width:640px; height:38px; top:340px;}
+.fd5{position:absolute; width:640px; height:36px; top:450px;}
+.fd6{position:absolute; width:640px; height:36px; top:500px;}
+.fd7{position:absolute; width:640px; height:36px; top:550px;}
+.fd8{position:absolute; width:640px; height:33px; top:670px;}
+
+.cl1{position:absolute; width:383px; height:540px; top:55px; left:120px;}
+.cl2{position:absolute; width:125px; height:165px; bottom:5%; left:90px;}
+.cl3{position:absolute; width:125px; height:165px; bottom:5%; right:100px;}
+.cl4{position:absolute; width:125px; height:165px; bottom:5%; z-index:101; right:40%; display:none;}
+.cl5{position:absolute; width:100%; height:100%; top:-40px; left:0; z-index:100; display:none;}
+
+.sq1{position:absolute; width:640px; height:720px; top:0; background:url(../images/zfb_3n.png) left top no-repeat;}
+.sq2{position:absolute; width:303px; height:90px; top:750px; left:2%;}
+.sq3{position:absolute; width:303px; height:90px; top:750px; right:2%;}
+.fengdi4{position:absolute; width:640px; height:102px; bottom:15%;display:none;}

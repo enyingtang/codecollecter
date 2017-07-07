@@ -1,0 +1,29 @@
+
+body{
+    width:400px;
+}
+
+
+#newTaskPanel{
+    transition:height 0.3s;
+    height:0;
+    background-color: pink;
+    overflow-y: hidden;
+}
+
+#blockPatterns, #sourcePatterns{
+    border: 1px solid red;
+    padding: 5px;
+}
+
+.patternItem{
+    transition:background 0.5s;
+    cursor: pointer;
+}
+
+.patternItem:hover{
+    background-color: darkseagreen;
+}
+
+
+

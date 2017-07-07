@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>Site Spider Results</title>
+<script type="text/javascript" src="resultsOnload.js"></script>
+
+<style type="text/css">
+  body {
+    font-family: sans-serif
+  }
+  #resultsTable {
+    border-spacing: 1px;
+    margin: 15px;
+    width: 99%;
+    table-layout: fixed;
+  }
+  #resultsTable th {
+    text-align: left;
+    background-color: #d0d0d0;
+  }
+  #resultsTable td, #resultsTable th {
+    font-size: 9pt;
+    padding: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #resultsTable td.x0 {
+    color: #c00;
+  }
+  #resultsTable tr:hover {
+    background: #ffa;
+  }
+  #startingOn, #restrictTo {
+    font-family: monospace;
+  }
+</style>
+</head>
+<body>
+<img src="icon128.png" align="right"/>
+<h1>Site Spider Results</h1>
+
+<form>
+<input type="button" id="pauseSpider" value="Pause"/>
+<input type="button" id="stopSpider" value="Stop"/>
+</form>
+
+<table>
+  <tr>
+    <td>Starting on:</td>
+    <td id="startingOn"></td>
+  </tr>
+  <tr>
+    <td>Restrict to:</td>
+    <td id="restrictTo"></td>
+  </tr>
+  <tr>
+    <td>Queue:</td>
+    <td id="queue">0</td>
+  </tr>
+  <tr>
+    <td>Status:</td>
+    <td id="status">Initializing...</td>
+  </tr>
+</table>
+
+
+<table id="resultsTable">
+  <colgroup>
+    <col style="width: 32%">
+    <col style="width: 32%">
+    <col style="width: 32%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th class="nocase">Requested URL</th>
+      <th class="nocase">Returned URL</th>
+      <th class="nocase">Referrer</th>
+    </tr>
+  </thead>
+  <tbody id="resultbody">
+  </tbody>
+</table>
+</body>
+</html>

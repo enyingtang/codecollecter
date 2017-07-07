@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>ParticleGround</title>
+<style>
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+ul, li, img, section{
+	width: 100%;
+	height: 100%;
+}
+ul{
+	-webkit-transition: -webkit-transform 600ms;
+	-moz-transition: -moz-transform 600ms;
+	transition: transform 600ms;
+}
+li{
+	float: left;
+	position: relative;
+}
+#btn,
+li > *{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.info{
+	margin: 1rem;
+	font: 20px "微软雅黑";
+	color: #ececec;
+	text-shadow: 2px 2px 0 #333;
+}
+#particle{
+	background-color: #000;
+}
+#wave{
+	background: #0076d1;
+	background: -webkit-linear-gradient(top,#0076d1,#5db8ff);
+	background: -moz-linear-gradient(top,#0076d1,#5db8ff);
+	background: linear-gradient(top,#0076d1,#5db8ff);
+}
+
+#btn{
+	z-index: 99;
+	top: auto;
+	bottom: 20px;
+	right: 0;
+	text-align: center;
+}
+#btn span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-right: 10px;
+	background-color: #2395BE;
+	border: 4px solid #fff;
+	box-shadow: 0 0 2px #ccc inset;
+	border-radius: 50%;
+	cursor: pointer;
+}
+#btn span:last-of-type{
+	margin-right: 0;
+}
+#btn .active{
+	background-color: #fff;
+	box-shadow: none;
+}
+
+#fork img{
+	width: 149px;
+	height: 149px;
+	position: absolute;
+	z-index: 99;
+	top: -7px;
+	right: 0;
+	border: 0;
+}
+</style>
+</head>
+<body>
+
+<ul>
+	<li id="particle">
+		<section class="container"></section>
+	</li>
+	<li id="wave">
+		<section class="container"></section>
+	</li>
+	<li id="snow">
+		<img src="snow.jpg">
+		<section class="container"></section>
+	</li>
+</ul>
+
+<aside id="btn">
+	<span class="active" title="粒子运动"></span>
+	<span title="波浪运动"></span>
+	<span title="雪花飘落"></span>
+</aside>
+
+
+<!-- 引入插件 -->
+<script src="particleground.min.js"></script>
+<script>
+var span = document.getElementById( 'btn' ).getElementsByTagName( 'span' );
+var ul = document.getElementsByTagName( 'ul' )[0];
+var li = ul.getElementsByTagName( 'li' );
+var liWidth = 0;
+var curIndex = 0;
+
+init();
+
+//插件粒子运动API
+//注：Particleground下的三个对象都有着pause和open方法，用于暂停和开启动画
+var particle = new Particleground.particle( '#particle .container', {
+	//全局透明度，默认0.8
+	opacity: .8,
+	//粒子颜色数组，默认随机色
+	// color: [ 'rgba( 255, 255, 255, .5 )', 'red', 'green', 'blue' ],
+	//粒子个数，默认为容器的0.1倍
+	//传入[0, 1)显示容器相应倍数的值，或传入具体个数[1, +∞)
+	num: .1,
+	//运动速度[0, +∞]，默认1
+	speed: 1,
+	//粒子最大半径，默认2.4
+	max: 2.4,
+	//粒子最小半径，默认0.6
+	min: .6,
+	//连接线最大距离，默认180
+	dis: 180,
+	//连接线段的宽度，默认0.2
+	lineWidth: .2,
+	//范围越大，连接的点越多，默认240
+	r: 240,
+	//移动事件的元素,默认为canvas，或传入原生js选择元素
+	// eventElem: document,
+	//让画布宽高自适应窗口大小的改变，默认false
+	resize: true
+});
+var wave, snow;
+
+for( var i = 0; i < span.length; i++ ){
+
+	span[ i ].index = i;
+	span[ i ].onclick = function(){
+
+		curIndex = this.index;
+		slideTab();
+
+	};
+
+}
+
+window.onresize = function(){
+
+	init();
+	slideTab();
+
+};
+
+document.onkeyup = function( e ){
+
+	switch( e.keyCode ){
+		//left
+		case 37:
+			curIndex--;
+			if( curIndex < 0 ){
+				curIndex = li.length-1;
+			}
+			slideTab();
+			break;
+		case 39: 
+			curIndex++;
+			if( curIndex > li.length-1 ){
+				curIndex = 0;
+			}
+			slideTab();
+			break;
+	}
+
+};
+
+function init(){
+
+	liWidth = document.documentElement.clientWidth;
+
+	ul.style.width = liWidth * li.length + 'px';
+
+	for( var i = 0; i < li.length; i++ ){
+
+		li[ i ].style.width = liWidth + 'px';
+
+	}
+
+}
+
+function slideTab(){
+
+	var translate = 'translate('+ -liWidth * curIndex +'px,0)';
+
+	ul.style.transform = translate;
+	ul.style.webkitTransform = translate;
+	ul.style.mozTransform = translate;
+	ul.style.msTransform = translate;
+
+	document.querySelector( '#btn .active' ).removeAttribute( 'class' );
+	span[ curIndex ].className = 'active';
+
+	switch( curIndex ){
+		case 0:
+			particle.open();
+			wave && wave.pause();
+			snow && snow.pause();
+			break;
+		case 1:
+			if( wave ){
+
+				wave.open();
+
+			}else{
+
+				//波浪运动API
+				wave = new Particleground.wave( '#wave .container', {
+					//全局透明度，默认0.8
+					opacity: .8,
+					//线条颜色，默认白色
+					color: '#fff',
+					//线条个数，默认1条，暂未开放
+					// num: 3,
+					//线条最大宽度(粒子最大半径)，默认1.4
+					max: 1.4,
+					//线条最小宽度，默认0.2
+					min: .2,
+					//波峰，默认高度的0.8倍，取值[0-1]，暂未开放
+					// crest: .6,
+					//线条运动速度，默认1.4
+					speed: 1.4,
+					resize: true
+				});
+
+			}
+			particle.pause();
+			snow && snow.pause();
+			break;
+		case 2:
+			if( snow ){
+
+				snow.open();
+
+			}else{
+
+				//雪花飘落API
+				snow = new Particleground.snow( '#snow .container', {
+					//雪花颜色，默认白色
+					color: '#fff',
+					//雪花最大半径，默认6.5
+					max: 6.5,
+					//雪花最小半径，默认0.4
+					min: .4,
+					//运动速度，默认0.4
+					speed: .4,
+					resize: true
+				});
+
+			}
+			particle.pause();
+			wave && wave.pause();
+			break;
+	}
+
+}
+
+</script>
+
+</body>
+</html>

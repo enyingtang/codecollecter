@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title>花瓣网画集批量下载器</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.bootcss.com/p/flat-ui/css/flat-ui.css"/>
+    <style>
+        body {
+            font-size: 12px;
+            margin: 12px 0;
+        }
+
+        img.logo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            min-width: 400px;
+            min-height: 400px;
+            z-index: 1;
+            opacity: .1;
+            background: red;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        input.form-control {
+            border-color: #ff6962;
+        }
+
+        .progress, .ui-slider {
+            height: auto;
+        }
+
+        p {
+            margin: 1.5em auto
+        }
+
+        #pins-url {
+            height: 42px;
+            line-height: normal;
+            font-size: 18px;
+            color: #555;
+            margin: 0;
+        }
+
+        .btn {
+            font-size: 16px;
+            padding: 12px 24px;
+        }
+
+        .result {
+            margin: 12px 0;
+        }
+
+        ul {
+            height: 80px;
+            overflow: auto;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .progress {
+            text-align: center;
+            color: #fff;
+        }
+
+        .progress .bar {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3>花瓣个人画集批量下载</h3>
+
+    <p class="control-group"><input type="text" id="pins-url" class="form-control input-block-level"
+                                    placeholder="粘贴个人画集的网址" value="http://huaban.com/mcbe4rtvcv/pins/"/></p>
+
+    <p><a href="#" class="after-open-explorer J-open-download-directory">打开下载目录</a></p>
+
+    <p><a class="btn btn-danger download-btn"> 开始一键下载</a></p>
+    <script src="https://a.alipayobjects.com/jquery/jquery/1.10.1/jquery.js"></script>
+
+
+    <div class="row result">
+        <div class="col-md-5">
+            <h6>成功 <span class="badge J-success-badge">0</span></h6>
+            <ul class="J-success-list">
+            </ul>
+        </div>
+        <div class="col-md-5">
+            <h6>失败 <span class="badge J-error-badge">0</span></h6>
+            <ul class="J-error-list">
+            </ul>
+        </div>
+    </div>
+    <div class="progress">
+        <div class="bar J-process-bar" style="padding:3px 0;width:100%;">尚未运行</div>
+    </div>
+
+</div>
+<script src="https://a.alipayobjects.com/jquery/jquery/1.10.1/jquery.js"></script>
+<script src="./assets/socket.io.min.js"></script>
+<script>
+    var $ = jQuery
+
+    var socket = io.connect('http://localhost:3001/huaban');
+    var result = document.getElementById('result')
+
+    $successList = $('.J-success-list')
+    socket.on('download success', function (data) {
+        $successList.append('<li>' + data.msg + '</li>')
+        $successList.scrollTop($successList.prop('scrollHeight'))
+    })
+
+    $errorList = $('.J-error-list')
+    socket.on('download error', function (data) {
+        $errorList.append('<li>' + data.msg + '</li>')
+        $errorList.scrollTop($errorList.prop('scrollHeight'))
+    })
+
+    socket.on('process', function (data) {
+        $('.J-success-badge').text(data.successCount)
+        $('.J-error-badge').text(data.errorCount)
+        var bar = (((data.sum - data.left) / data.sum) * 100).toFixed(2) + '%'
+        $('.J-process-bar').css({
+            'width': bar
+        }).html('已完成' + bar + '，还剩' + data.left + '张图片')
+    })
+
+    socket.on('load pins', function (data) {
+        $('.J-process-bar').text('已经获取到了' + data.count + '张图片')
+    })
+
+    $('.J-open-download-directory').on('click', function (ev) {
+        ev.preventDefault()
+        $(this).toggleClass('checked')
+        socket.emit('open-download-directory', {})
+    })
+
+    $('.download-btn').on('click', function (ev) {
+        console.log($('#pins-url').val())
+        socket.emit('start download', {url: $('#pins-url').val()})
+    })
+
+</script>
+</body>
+</html>

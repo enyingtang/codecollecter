@@ -1,0 +1,66 @@
+.page-tel .top {
+	POSITION: absolute; TEXT-ALIGN: center; WIDTH: 100%; TOP: 100px; LEFT: 0px
+}
+.page-tel .tonghua {
+	POSITION: absolute; MARGIN-LEFT: -50px; TOP: -59px; LEFT: 50%; opacity: 0
+}
+.page-tel .tonghua_show {
+	opacity: 1; -webkit-animation: bounceIntel 0.4s; animation: bounceIntel 0.4s
+}
+.page-tel .touxiang_circle {
+	BORDER-BOTTOM: #fff 2px solid; POSITION: absolute; BORDER-LEFT: #fff 2px solid; WIDTH: 256px; HEIGHT: 256px; MARGIN-LEFT: -130px; BORDER-TOP: #fff 2px solid; TOP: 0px; BORDER-RIGHT: #fff 2px solid; LEFT: 50%; opacity: .6; border-radius: 50%; -webkit-border-radius: 50%
+}
+.page-tel .tonghua_dumiao {
+	BORDER-BOTTOM: #fff 2px solid; POSITION: absolute; BORDER-LEFT: #fff 2px solid; WIDTH: 256px; HEIGHT: 256px; MARGIN-LEFT: -130px; BORDER-TOP: #fff 2px solid; TOP: 0px; BORDER-RIGHT: #fff 2px solid; LEFT: 50%; opacity: .6; border-radius: 50%; -webkit-border-radius: 50%
+}
+.page-tel .tonghua_dumiao {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; WIDTH: 260px; DISPLAY: none; BORDER-TOP-STYLE: none; HEIGHT: 260px; BORDER-LEFT-STYLE: none; border-radius: none; -webkit-border-radius: none
+}
+.page-tel .canvas {
+	POSITION: absolute; TOP: 0px; LEFT: 0px
+}
+.page-tel .second {
+	POSITION: absolute; TEXT-ALIGN: center; WIDTH: 100%; COLOR: #fff; FONT-SIZE: 22px; TOP: -10px; LEFT: 0px; opacity: 1
+}
+.page-tel .touxiang {
+	Z-INDEX: 2; POSITION: absolute; MARGIN-LEFT: -100px; TOP: 30px; LEFT: 50%
+}
+.page-tel .address {
+	MARGIN-TOP: 280px
+}
+.page-tel .jieting {
+	Z-INDEX: 9; POSITION: absolute; WIDTH: 496px; BOTTOM: 80px; BACKGROUND: url(k_jieting.png) no-repeat; HEIGHT: 309px; MARGIN-LEFT: -248px; LEFT: 50%
+}
+.page-tel .jieting_btn {
+	BORDER-BOTTOM: #fff 2px solid; POSITION: absolute; BORDER-LEFT: #fff 2px solid; WIDTH: 136px; HEIGHT: 136px; BORDER-TOP: #fff 2px solid; TOP: 160px; BORDER-RIGHT: #fff 2px solid; LEFT: 178px; opacity: .8; border-radius: 50%; -webkit-border-radius: 50%
+}
+.page-tel .btn_inner {
+	BACKGROUND-COLOR: #fff; MARGIN: 62px auto 0px; WIDTH: 8px; HEIGHT: 8px; border-radius: 50%; -webkit-border-radius: 50%
+}
+.page-tel .jieting_down {
+	-webkit-animation: bounceLargetel 0.1s linear; animation: bounceLargetel 0.1s linear
+}
+.page-tel .keybord {
+	POSITION: absolute; WIDTH: 100%; BOTTOM: 0px; BACKGROUND: url(k_keybord.png) no-repeat; HEIGHT: 856px; LEFT: 0px; -webkit-transform-origin: left bottom; opacity: 0; transform-origin: left bottom; -webkit-animation-fill-mode: both; animation-fill-mode: both
+}
+.page-tel .hungUp_btn {
+	Z-INDEX: 999; POSITION: absolute; WIDTH: 100%; BOTTOM: 80px; BACKGROUND: url(icon_hungUp.png) no-repeat center center; HEIGHT: 140px; LEFT: 0px
+}
+.page-tel .hungUp_btn:active {
+	opacity: .8
+}
+.page-tel .keybordUp {
+	Z-INDEX: 99; opacity: 1; -webkit-animation: keybordUptel 0.5s linear; animation: keybordUptel 0.5s linear
+}
+.page-tel .keybordUp .hungUp_btn {
+	Z-INDEX: 99
+}
+.page-tel .message {
+	POSITION: absolute; WIDTH: 100%; BACKGROUND: url(k_msg_bot.jpg) #f6f6f6 no-repeat left bottom; HEIGHT: 100%; TOP: 0px; RIGHT: 0px; opacity: 0
+}
+.page-tel .message_on {
+	opacity: 1; -webkit-animation: bounceIntel 0.4s; animation: bounceIntel 0.4s
+}
+.page-tel .message IMG {
+	MARGIN: 30px 0px 0px 20px; DISPLAY: none
+}

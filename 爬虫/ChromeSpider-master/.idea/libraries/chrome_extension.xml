@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="chrome extension" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$USER_HOME$/Downloads/chrome_extensions.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$USER_HOME$/Downloads/chrome_extensions.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

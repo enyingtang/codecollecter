@@ -1,0 +1,33 @@
+{
+    "name": "Spider",
+    "version": "0.9",
+    "manifest_version": 2,
+    "description": "Spider",
+
+    "icons": {
+        "16": "logo.png",
+        "48": "logo.png",
+        "128": "logo.png"
+    },
+
+	
+    "browser_action": {
+        "default_title": "Spider",
+        "default_icon": "logo.png",
+		"default_popup": "popup.html" 
+    },
+
+    "background": {
+        "scripts": ["js/jquery.min.js","js/lib.js","js/background.js"]
+    },
+
+
+    "permissions": [
+        "notifications",
+        "cookies",
+		"http://*/*",
+		"https://*/*",
+		"webRequest",
+        "webRequestBlocking"
+    ]
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="popup.js"></script>
+    <title></title>
+</head>
+<body>
+
+
+<label for="taskSelection">任務:
+    <select id="taskSelection">
+        <option value="t1">task 1</option>
+    </select>
+</label>
+<button id="newTabButton">新增任務</button>
+<button id="newCrawlerButton">新增爬蟲</button>
+<div id="newTaskPanel">
+    <label for="taskName">任務名稱:
+    <input type="text" id="taskName" placeholder="task name" />
+    </label>
+    <button id="cancelNewTask">取消</button>
+</div>
+
+<div>
+    <label></label>
+    <button id="newBlockPatternButton">新增資訊</button>
+    <div id="blockPatterns">
+        <div class="patternItem">p1</div>
+        <div class="patternItem">p2</div>
+        <div class="patternItem">p3</div>
+    </div>
+</div>
+
+<div>
+    <label></label>
+    <button id="newSourcePatternButton">新增來源</button>
+    <div id="sourcePatterns">
+        <div class="patternItem">p1</div>
+        <div class="patternItem">p2</div>
+        <div class="patternItem">p3</div>
+    </div>
+</div>
+
+<div>
+    <label></label>
+    <label for="url">新增網址:
+        <input type="text" id="url" placeholder="URL" />
+    </label>
+    <button id="addURLButton">加入目前網址</button>
+    <div id="sourcePatterns">
+        <div class="patternItem">p1</div>
+        <div class="patternItem">p2</div>
+        <div class="patternItem">p3</div>
+    </div>
+</div>
+<div>
+    <button id="startTaskButton">開始任務</button>
+    <button id="stopTaskButton">暫停任務</button>
+    <button id="stopTaskButton">查看內容</button>
+</div>
+</body>
+</html>

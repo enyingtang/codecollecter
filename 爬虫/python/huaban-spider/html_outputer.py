@@ -1,0 +1,2 @@
+class HmtlOutputer(object):
+    pass

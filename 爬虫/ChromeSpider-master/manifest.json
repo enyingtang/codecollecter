@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "browser_action": {
+        "default_icon": "img/icon48.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "description": "Crawl a url for interesting links!",
+    "icons": {
+        "48": "img/icon48.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["js/jquery-2.1.0.min.js"]
+        }
+    ],
+    "name": "Chrome Crawler",
+    "options_page": "options.html",
+    "permissions": [ "<all_urls>",
+        "tabs" ,
+        "activeTab"],
+    "version": "0.6"
+}

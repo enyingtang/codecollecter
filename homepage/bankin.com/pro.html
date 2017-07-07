@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+	<meta http-equiv="pragma" content="no-cache" />
+    <title>Bankin'</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+  
+    <!-- Bootstrap -->
+    <link href="public/stylesheets/home/bootstrap-tmsp=25112015.css" rel="stylesheet">
+    <link href="public/stylesheets/home/bankinpro-tmsp=25112015.css" rel="stylesheet">
+    
+    
+	<!-------- Strings --------->
+	<script src="public/javascripts/ressources/fr-tmsp=25112015.js"></script>
+    
+    <!-- Js -->
+    <script src="public/javascripts/bankinTools-tmsp=25112015.js"></script>
+   	<script src="public/javascripts/services/services-tmsp=25112015.js"></script>
+   	<script src="public/javascripts/services/status-tmsp=25112015.js"></script>
+   	<script src="public/javascripts/popups-tmsp=25112015.js"></script>
+    <script type="text/javascript" language="javascript"  src="public/javascripts/home/bootstrap-tmsp=25112015.js"></script>
+    <script type="text/javascript" language="javascript"  src="public/javascripts/libraries/jquerylibs/jquery.watermark.min.js"></script>
+
+    <script type="text/javascript" language="javascript"  src="public/javascripts/home/home_pro-tmsp=25112015.js"></script>
+	
+
+    <!--[if lt IE 9]>
+      <script src="public/javascripts/home/html5shiv-tmsp=25112015.js"></script>
+      <script src="public/javascripts/home/respond.src-tmsp=25112015.js"></script>
+      <![endif]--> 
+      <!--[if lte IE 9]>
+      <style>
+      	.navbar-inverse {background-color: black!important;}
+       </style>
+    <![endif]-->
+
+	<script src="public/javascripts/home/modernizr-tmsp=25112015.js"></script>
+	<script>
+	if (typeof _analytic === "undefined") {
+		var _analytic = {};
+	}
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','_gaq');
+
+  _gaq('create', 'UA-35796547-1', 'auto');
+  _gaq('require', 'linkid', 'linkid.js');
+  _gaq('require', 'displayfeatures');
+  _gaq('require', 'ecommerce');
+  _gaq('send', 'pageview');
+
+  _gaq(function(tracker) {
+	  _analytic.clientId = tracker.get('clientId');  
+  });
+</script>
+<!-- END Google Analytics -->
+	<script src="public/javascripts/home/home_pro_analytic-tmsp=25112015.js"></script>
+	
+	<!-- Facebook Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','//connect.facebook.net/en_US/fbevents.js');
+	
+	fbq('init', '1589843577947881');
+	fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1589843577947881&ev=PageView&noscript=1"/></noscript>
+	<!-- End Facebook Pixel Code -->
+  </head>
+  <body>
+	<input type="hidden" id="partner_name"  name="partner_name" value="">
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand">
+                  <a href="pro-partner=.html"><img src="public/images/home/logo-pro-blue.png" alt="Bankin Pro"></a>
+                  	
+                </div>
+            </div> <!-- navbar-header -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">				
+			
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+                    <a href="pro.html#" class="dropdown-toggle" data-toggle="dropdown">Se connecter <b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+                        <li>
+                           <div class="row signin">
+                              <div class="col-md-12">
+                                 <form id="login" name="login">
+                                 	<input type="hidden" name="authenticityToken" value="4c5d7cd9261219ddc3b6cdbb5a72f0f5f1773ee8"/>
+
+                                    <div class="form-group">
+                                       <label class="sr-only" for="login_email">Adresse e-mail</label>
+                                       <input id="login_email" type=text name="email" value="" class="login_email form-control" placeholder="Votre adresse email" required>
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="sr-only" for="login_password">Mot de passe</label>
+                                       <input id="login_password" type=password name="password" value="" class="login_password form-control" placeholder="Votre mot de passe" required>
+                                    </div>           
+                                    <div class="form-group">
+                                       <button type="submit" class="btn btn-default btn-block" name=submitL value="Connexion" id="login_button">Se connecter</button>
+                                    </div>                                   
+                                      <p class="text-center"><font id="forgottenPwd"><a class="btn btn-link" role="button">Mot de passe oublié ?</a></font></p>
+                                 </form>
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                  </li>
+                  <li><a href="pro.html#action" id="signup" class="signup_button" role="button">S'enregistrer</a></li>
+               </ul>          
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->        
+    </nav>
+
+         <div class="jumbotron">       	
+        		
+        			<div class="row">
+        				<div class="col-lg-4 col-lg-offset-8 col-md-4 col-md-offset-8 col-sm-4 col-sm-offset-8 col-xs-7 col-xs-offset-5">
+        					<h1>Vos comptes professionnels comme vous ne les avez jamais vus</h1>
+        				</div>
+        			</div>
+        			<div class="row">
+        				<div class="col-lg-4 col-lg-offset-8 col-md-4 col-md-offset-8 col-sm-4 col-sm-offset-8 col-xs-10 col-xs-offset-2">
+        				    <a class="btn btn-default signup_button" href="pro.html#action">Créer un compte gratuitement</a>
+        				 </div>
+        	  			
+					<div class="row bannerSlider hidden-xs">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<a href="pro.html#users"></a>
+						</div>
+					</div>
+				</div> <!-- /.intro -->
+        </div> <!-- /.jumbotron -->
+  
+<div class="container-fluid">
+		<div class="row users" id="users">       		
+       			<div class="col-xs-12">
+	   				<h1>1 million de personnes font confiance à Bankin' au quotidien.</h1>
+	   			</div>
+		</div>       
+       
+       <div class="row explication">   
+       		<div class="col-lg-5 lg-push-6 col-md-5 md-push-6 col-sm-6 col-sm-push-6 col-xs-12">
+            	<h1>Une visibilité parfaite sur les finances de votre entreprise. En temps réel et sans aucun effort.</h1>
+            	<p>Synchronisez tous vos comptes sur Bankin' Pro : vous découvrirez instantanément les analyses essentielles sur les finances de votre entreprise et la situation agrégée de votre Cash en temps réel, de tous vos comptes, dans toutes vos banques.</p>
+                <p>Il n’y a aucune saisie manuelle. Notre système est connecté à plus de 180 Banques Françaises et analyse automatiquement l'ensemble des transactions avec un historique illimité.</p>
+                 <!-- <a class="btn btn-default signup_button" href="#action">créer un compte gratuitement</a> -->
+            </div>
+       		<div class="col-lg-6 col-lg-offset-1 lg-pull-6 col-md-6 col-md-offset-1 md-pull-6 col-sm-6 col-sm-pull-6 col-xs-12">
+              <div id="scrolling-iphone">
+                    <img id="iphone_image" src="public/images/home/i-Phone_white.png" alt="iphone">    
+                    <img id="screen" src="public/images/home/five_screens_pro.png" alt="iphone-screenshots">
+                </div>
+           </div>
+           
+	   </div> <!-- explication -->
+<hr style= "margin-top: 0px;">             
+       <div class="row categorisation">       		        
+           <div class="col-lg-5 col-lg-offset-1 col-md-5 col-sm-6 col-xs-12">
+            	<h1>Un système intelligent et personnalisable.</h1>
+            	       <p>Bankin' Pro apprend de vos préférences (Fournisseurs A, Fournisseurs B, Client A...) afin de fournir des analyses toujours plus précises et pertinentes pour votre activité. </p>
+					   <p>En attente d'un virement ? Un doute sur la situation des comptes en fin de mois ? Vous pouvez dormir sur vos deux oreilles ! Bankin’ Pro vous alerte par mail et par notification push des mouvements sur vos comptes et lorsque l'un de vos soldes s'approche du découvert.</p>
+              <p>Vous pouvez également prévoir la situation du cash en fin de mois de manière intelligente.</p>
+            </div>           
+            <div class="col-lg-5 col-lg-offset-1 col-md-6 col-sm-6 col-xs-12 mockup-wrapper">
+              <div id="carousel_piechart" class="carousel slide" data-ride="carousel">
+                 <!-- Wrapper for slides -->
+                 <div class="carousel-inner">
+                      <div class="item active">
+                          <img src="public/images/home/02-notifs_00.png" alt="chartre graphique">
+                       </div>
+                       <div class="item ">
+                           <img src="public/images/home/02-notifs_03.png" alt="Salaires">     
+                       </div>
+                       <div class="item ">
+                           <img src="public/images/home/02-notifs_01.png" alt="URSAFF">                             
+                       </div>                   
+                  </div>                     
+               </div><!-- carousel -->
+           </div>
+       </div>
+       
+       <div class="row security">
+            <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-3 col-xs-3">
+              <img src="public/images/home/03-locked.png" class="img-responsive" alt="cadenas securite">
+            </div>
+            <div class="col-lg-7 col-md-8 col-sm-9 col-xs-9">
+            	<h1>Vos données sont en sécurité</h1>
+            	<p>Bankin' améliore la sécurité de vos finances grâce aux alertes emails et notifications que vous recevez dès qu'un mouvement inhabituel a lieu sur vos comptes.</p>
+            	<p>Personne, ni même vous, ne peut transférer de l'argent entre ou depuis vos comptes en utilisant Bankin'. C'est un service en lecture seule uniquement.</p>
+            	<p>Bankin' utilise des algorithmes de chiffrement 256 bits et SSL 3.0 de niveau bancaire pour sécuriser vos données. Nos systèmes répondent aux normes PCI (Payment Card Industry) et notre sécurité est homologuée par Norton Secured. Bankin' est recommandé par AXA Banque.</p>
+            </div>            
+       </div>     
+  </div> <!-- /.container -->
+       
+       <div class="row testimonials"> 
+       		 <div class="container">          
+            	<h1>Plus de 10 000 entreprises nous font déjà confiance !</h1>
+            	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            		<div class="fonctionnalite">
+            			<img src="public/images/home/simon-face.png" class="img-responsive" alt="logo-transparence">
+						<h4>Simon, Fondateur d’Appgratis.</h4>
+						<blockquote> 
+							<p>« Bankin’ me fournit des analyses en temps réel sur les flux financiers de l’entreprise. C’est bluffant ! » <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+							<footer><cite >Marketing digital</cite></footer>
+						</blockquote>
+					</div> <!-- /.fonctionnalite -->
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            		<div class="fonctionnalite">
+            			<img src="public/images/home/didier-face.png" class="img-responsive" alt="logo-optimisation">
+						<h4>Didier, Fondateur de Chais d’œuvre.</h4>
+						<blockquote>
+							<p>« Un super outil de gestion « temps réel » du cash : une consultation immédiate de mes soldes, et des alertes quand les clients me paient. » <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+							<footer><cite > Cave à vin en ligne</cite></footer>
+						</blockquote>
+					</div> <!-- /.fonctionnalite -->
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            		<div class="fonctionnalite">
+            			<img src="public/images/home/franck-face.png" class="img-responsive" alt="logo-alerte">
+						<h4>Franck, Fondateur d’Adlead. </h4>
+						<blockquote>
+							<p>« Consulter les comptes de la boite devient un jeu d’enfant. » <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+							<footer><cite >Mobile App Advertising</cite></footer>
+            			</blockquote>
+					</div> <!-- /.fonctionnalite -->
+				</div>
+ 
+			</div> <!-- /.container  -->           
+       </div> <!-- /.testimonials -->
+       
+       <div class="container">       
+				    
+	   		<div class="row action" id="action">
+		   		<h1>Offre d'essai gratuite (15 JOURS GRATUITS puis 9,99€ / mois)</h1> 
+		   		
+            <div class="col-lg-4 col-lg-offset-1 col-md-4 col-md-offset-1 col-sm-5 col-sm-push-7 col-xs-12 resume">
+                        <div class="panel-group" id="accordion">
+                                
+                                <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h4 class="panel-title text-center">
+                                        	FAQ
+                                        </h4>
+                                      </div>
+                                </div>                                   
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a data-toggle="collapse" data-parent="#accordion" href="pro.html#collapseOne">
+                                          <span class="glyphicon glyphicon-play"></span>
+                                            Que comprend la version d'évaluation ?
+                                          </a>
+                                        </h4>
+                                      </div>
+                                      <div id="collapseOne" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                               <ul class="liste">
+                                                    <li><span>Accès complet à Bankin' Pro pendant 15 jours</span></li>
+                                                    <li><span>Synchronisation illimitée de comptes bancaires et de banques</span></li>
+                                                    <li><span>Analyses automatiques des transactions et personnalisation des catégories</span></li>
+                                                    <li><span>Notifications push et email sur les transactions et les soldes</span></li> 
+                                                    <li><span>Historique illimité et export des données sur Excel</span></li>
+
+                                              </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a data-toggle="collapse" data-parent="#accordion" href="pro.html#collapseTwo">
+                                          	<span class="glyphicon glyphicon-play"></span>
+                                            Qui utilise Bankin' ?
+                                          </a>
+                                        </h4>
+                                      </div>
+                                      <div id="collapseTwo" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                          
+                                            Plus d'1 million de personnes et plus de 10 000 entreprises en FRANCE utilisent Bankin' pour gagner en efficacité, dont :
+                                            <div class="blocklogo">
+                                              <img src="public/images/home/adlead.jpg"/>
+                                              <img src="public/images/home/chaisdoeuvre.jpg"/>
+                                              <img src="public/images/home/appgratis.jpeg"/>
+                                        </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a data-toggle="collapse" data-parent="#accordion" href="pro.html#collapseThree">
+                                          	<span class="glyphicon glyphicon-play"></span>
+                                            Ma carte bancaire est-elle immédiatement débitée ?
+                                          </a>
+                                        </h4>
+                                      </div>
+                                      <div id="collapseThree" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Ne vous inquiétez pas, vous n'avez rien à payer pour le moment. Vous ne serez facturé que si vous décidez de continuer d'utiliser Bankin' Pro après la fin de l'offre, le 10 d&eacute;cembre 2015.
+                                        </div>
+                                      </div>
+                                    </div>
+                                      <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a data-toggle="collapse" data-parent="#accordion" href="pro.html#collapseFive">
+                                          	<span class="glyphicon glyphicon-play"></span>
+                                            Puis-je modifier mon mode de paiement ?
+                                          </a>
+                                        </h4>
+                                      </div>
+                                      <div id="collapseFive" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                           <p> Oui ! Vous pouvez à tout moment modifier votre mode de paiement.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                      <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a data-toggle="collapse" data-parent="#accordion" href="pro.html#collapseSix">
+                                          	<span class="glyphicon glyphicon-play"></span>
+                                            Puis-je annuler l'offre d'essai à tout moment ?
+                                          </a>
+                                        </h4>
+                                      </div>
+                                      <div id="collapseSix" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                          <p>Oui ! L'inscription à une offre d'essai n'est liée à aucune obligation. Vous pouvez annuler l'offre à tout moment.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a data-toggle="collapse" data-parent="#accordion" href="pro.html#collapseSeven">
+                                          	<span class="glyphicon glyphicon-play"></span>
+                                            Quelles sont les modalités de paiement acceptées ?
+                                          </a>
+                                        </h4>
+                                      </div>
+                                      <div id="collapseSeven" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                          <p>Si vous avez besoin d'une facture pour effectuer un paiement, veuillez contacter notre équipe commerciale à <a href="mailto:Pro@bankin.com">Pro@bankin.com</a>.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a data-toggle="collapse" data-parent="#accordion" href="pro.html#collapseEight">
+                                          	<span class="glyphicon glyphicon-play"></span>
+                                            Les paiements sont-ils sécurisés ?
+                                          </a>
+                                        </h4>
+                                      </div>
+                                      <div id="collapseEight" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                          <p>Les paiements sont réalisés par Paypal, sécurisés par le protocole SSL et un chiffrement des données côté client.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+              </div><!-- col containing list -->  
+              <div class="col-lg-7 col-md-7 col-sm-7 col-sm-pull-5 col-xs-12">
+                	<div id="formulaire">                 
+                         <div class="step0">
+                            <h3>Créer un compte</h3>
+                            <p style="margin:0% 0% 0% 2%;">ou utiliser un <a href="fr/index.html">compte existant</a></p>
+                            <input id="buyer_email" name="buyer_email" value="">
+                            <input id="email2" name="email2" value="">
+                            <input id="pwd1" type="password" name="pwd1" value="">
+                            <input id="pwd2" type="password" name="pwd2" value="">
+                            <p style="margin-top: 0px; vertical-align: middle;">
+                              <input class="check" id="cgu_check" style="width: 18px;height: 18px;" type="checkbox" name="cgu_check" value="">
+                              J'ai lu et j'accepte les <a href="cgu.html" target="blank">conditions générales d'utilisation</a>
+                            </p>
+                            <p style="margin-top: 0px;font-size: 13px">
+                              <input class="check" id="optin_check" style="width: 18px;height: 18px;" type="checkbox" name="optin_check" value="">
+                              Je souhaite optimiser mon budget en recevant les offres sélectionnées par Bankin', notamment de produits bancaires et financiers.
+                            </p>
+                            <div id="errorMsg" style="color: red;"></div>
+                            <img src="public/images/home/loader.gif" style="visibility: hidden;" id="loader1"/>
+                            <div class="btn btn-default btn-block" id="btnNext0">suivant</div>
+                      </div>
+                      <div class="step1">
+                          <h3>Informations relatives à la facturation</h3>
+                            <input id="raisonsociale" name="raisonsociale" value="" style="width:95%;">
+                            <input id="activity" name="activity" value="">
+                            <input id="employees" name="employees" value="">
+                            <p class="lead">Adresse</p>
+                            <input id="billing_address1" name="billing_address1" value="" style="width:95%;">
+                            <input id="billing_city" name="billing_city" value="">
+                            <input id="country" name="country" value="">
+                            <input id="billing_zip" name="billing_zip" value="">
+                            <div id="errorMsg2" style="color: red;"></div>
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="formPaypal" name="formPaypal" style="visibility: hidden;">
+                                      <input type="hidden" name="cmd" value="_xclick-subscriptions">
+                                      <input type="hidden" name="business" value="YKQXVMTD3UMUQ">
+                                      <input type="hidden" name="lc" value="FR">
+                                      <input type="hidden" name="item_name" value="Bankin' Pro (Offre d'essai gratuite 15 jours)">
+                                      <input type="hidden" name="no_note" value="1">
+                                      <input type="hidden" name="no_shipping" value="1">
+                                      <input type="hidden" name="rm" value="1">
+                                      <input type="hidden" name="return" value="https://bankin.com/confirmationCguPro">
+                                      <input type="hidden" name="cancel_return" value="https://bankin.com/confirmationCguPro">
+                                      <input type="hidden" name="a1" value="0">
+                                      <input type="hidden" name="p1" value="15">
+                                      <input type="hidden" name="t1" value="D">
+                                      <input type="hidden" name="src" value="1">
+                                      <input type="hidden" name="a3" value="19.99">
+                                      <input type="hidden" name="p3" value="1">
+                                      <input type="hidden" name="t3" value="M">
+                                      <input type="hidden" name="currency_code" value="EUR">
+                                      <input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHosted">
+                                      <input type="hidden" name="page_style" value="Bankin_Pro">
+                              <input type="hidden" name="item_number" id="item_number" value="">
+                             <input type="image" style="width: 516px; height: 51px;border: 0px" src="http://web.bankin.com/img/web-partners/btn-subscribe.png" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
+                              <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+                              
+                            </form>
+                            <div id="submitText" style="cursor: pointer">
+                              <b>Vous ne serez pas débité avant le 10 d&eacute;cembre 2015. Puis 19,99€ si vous aimez le service.</b><br/><br/>
+                            </div>
+                            <div id="submitText2" style="cursor: pointer">
+                            * informations obligatoires
+                            </div>
+                    </div>
+       	       </div> <!-- col containg the form -->   
+            </div><!-- row -->
+    	 </div>
+	   	</div> <!-- /.container -->
+
+			<div class="row menu">
+				<div class="container">
+					<div class="col-md-10 col-xs-9">
+					<ul>
+							<li><a href="fr/index.html">Bankin Classique</a></li>
+							<li><a href="fr/technologies.html">API</a></li>
+					</ul>
+					</div>
+					<div class="col-md-2 col-xs-3">
+						<a href="https://www.facebook.com/ilovebankin" target="_blank">
+							<img src="public/images/home/facebook.png" alt="facebook">
+						</a>			
+						<a href="https://twitter.com/Bankin" target="_blank">
+							<img src="public/images/home/twitter.png" alt="twitter">
+						</a>
+					</div>
+				</div><!-- /.container -->
+			</div> <!-- /.row menu -->
+
+    <!-- JavaScript -->
+  	<div id="loading">
+			<div id="center">
+				<span class="logo"></span>
+				<div id="loadingLabel">Chargement... <img src="public/images/home/loader.gif" alt="chargement"/></div>
+			</div>
+	</div>
+		<div id="result"></div>
+		<div id="confirmationBlackback" ></div>
+		<div id="confirmationPopup" >
+			<div class="confirmationTop">
+				<span class="glyphicon glyphicon-remove" id="confirmationClose"></span>
+			</div>  
+			<p id="confirmationContent">Confirmez-vous ?</p>
+			<div id="confirmationButtons">
+				<a class="btn btn-primary" id="confirmationOKButton">Ok</a>
+				<a class="btn btn-danger" id="confirmationCancelButton">Cancel</a>
+			</div>
+		</div>    
+		<div id="information_popup" onClick="hideAlert();">
+			<span></span>
+		</div>
+
+	<div id="error_popup" onClick="hideAlert();"><span></span> </div>
+
+  </body>
+</html>

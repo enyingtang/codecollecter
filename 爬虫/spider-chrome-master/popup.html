@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Site Spider Popup</title>
+        <style>
+            body {
+                font-family: sans-serif;
+            }
+            h1 {
+                font-size: smaller;
+            }
+        </style>
+        <script type="text/javascript" src="popupOnload.js"></script>
+    </head>
+    <body>
+        <h1>Site Spider</h1>
+
+        <p>
+            Start on:<br>
+            <input id="start" size=40>
+        </p>
+
+        <p>
+            Restrict to:<br>
+            <input id="regex" size=40>
+        </p>
+        <p>
+            <input id="plusone" type="checkbox">
+            <label for="plusone">Follow one link beyond restriction.</label>
+        </p>
+        <p>
+            <input id="inline" type="checkbox">
+            <label for="inline">Check inline content.
+                <small>(CSS, images)</small></label>
+        </p>
+        <p>
+            <input id="scripts" type="checkbox">
+            <label for="scripts">Check script content.
+                <small>(JavaScript, Flash)</small></label>
+        </p>
+        <p>
+            <input id="arguments" type="checkbox">
+            <label for="arguments">Avoid links with arguments.
+                <small>(e.g.&nbsp;page?foo=bar)</small></label>
+        </p>
+
+        <p>
+            <input type="button" value="Go" id="siteSpiderGo">
+        </p>
+
+    </body>
+</html>

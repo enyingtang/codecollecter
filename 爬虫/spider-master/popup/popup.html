@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="angular.js"></script>
+    <script src="underscore.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body style="width: 800px" ng-app="app" ng-controller="HomeController">
+    <h1>{{host}} </h1>
+    <ul>
+      <li ng-repeat="url in urls track by $index"> <a title="{{url}}" ng-click="gotoUrl(url)"> {{url | shrink}} </a> </li>
+    </ul>
+  </body>
+</html>

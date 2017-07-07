@@ -1,0 +1,16 @@
+{
+  "name": "chrome.huaban.collect.all",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "花瓣网采集画板里所有图片",
+
+  "content_scripts": [
+    {
+      "matches": ["http://huaban.com/boards/*"],
+      "js": [
+        "jquery.js",
+        "contentscript.js"
+      ]
+    }
+  ]
+}
